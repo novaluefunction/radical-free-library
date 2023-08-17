@@ -164,6 +164,26 @@ Steps 21-25, to the best of my understanding, tell the router to check the file 
     /etc/hosts
 
     So keep these in mind if you're trying to debug anything.
-    
+
+# Making your own bootable USB
+If you'd like to run this system from a bootable USB, you can, in principle, do something like the following.
+
+## Get a USB drive
+Any should work, but you probably want it to be large enough to hold all the books you want, plus about 20G for a comfortable install of the OS.
+
+## Download your favorite ISO
+Pick your favorite Linux distro, grab an iso file for an install, and you're set. I've personally only tested on Ubuntu 20.04, x86-64. You can find downloads for many Ubuntu install isos here: https://launchpad.net/ubuntu/+cdmirrors, just pick one, perhaps the one you trust most or is closest to you geographically for download speed.
+
+## Make a persistantly bootable USB
+You can use the Universal USB Installer (https://www.pendrivelinux.com/universal-usb-installer-easy-as-1-2-3/) to install the OS onto your thumbdrive. The link has some guidance on how you might want to configure these things. I should update this section with more detail later.
+
+## Boot from your new drive
+Pick a computer to boot up with your newly configured drive
+
+## Set up the Radlib
+Follow the instructions above, or use the autoconfig script, to set up radlib on you device, make sure to place things into persistent storage where necessary.
+
+At this point you should have radlib set up as a nice, portable, discreet (crushable?) system, which can then be further cloned or distributed as you want.
+
 # Misc. Notes: 
 This can pretty much all be automated, and I'll start working on a script soon to try and tie it together, though some manual work will likely have to be done to interact with calibre, and programmatic router interaction seems model-dependant. I'll again point you, gentle reader, back to the original blog post which goes into much greater detail about the "whys" of a lot of this stuff, as I don't want to really rehash it all here (and I don't understand a lot of the specific configurations very well at the time of writing). More broadly, I would like to set up something portable like a qcow pre-configured to do as much of this as possible, with additional instructions on how to just run that under qemu from any linux system, which (hopefully) would take a lot of the load off of whoever might be maintaining the server, but I haven't put a lot of thought into that yet, or tested it, so I'm unsure if that would just create more problems than it solves. These notes are more for me, than you, after all.
